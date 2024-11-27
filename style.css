@@ -2,7 +2,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Inter;
+  font-family: Josefin + Sans;
 }
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 
 html,
 body {
@@ -18,6 +20,7 @@ li {
 .navbar {
   display: flex;
   font-family: Inter;
+  font-family: Josefin + Sans;
   flex-direction: column;
   align-items: center;
   padding: 40px;
@@ -82,7 +85,10 @@ a {
   display: flex;
   flex-direction: column;
 }
-
+.second {
+  width: 100%;
+  height: auto;
+}
 .first_row {
   width: 100%;
   display: flex;
@@ -100,9 +106,18 @@ a {
 
 .img_3 {
   position: relative;
+  width: 100%;
+  height: auto;
 }
 .img_4 {
   position: relative;
+}
+.img_ {
+  object-fit: cover;
+  overflow: hidden;
+
+  width: 100%;
+  height: 35rem;
 }
 .para {
   width: 100%;
@@ -112,7 +127,7 @@ a {
   font-size: 1.5rem;
 }
 
-.shop {
+button {
   background-color: transparent;
   border: 1px solid #000;
   border-radius: 9px;
@@ -124,39 +139,30 @@ a {
 }
 
 button:hover {
-  background-color: rgb(239, 216, 194);
+  background-color: rgb(255, 241, 246);
 }
 
-.about_me{
- position: absolute;
- left: 50%;
- top: 50%;
- transform: translate(-50%,-50%);
- background-color: white;
- border: 1px solid #000;
- border-radius: 9px;
- color: #000;
- padding: 10px 30px;
- font-size: 16px;
- transition: background-color 90ms;
- cursor: pointer;
-  
-}
-
-.more {
+.about_me_btn {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   background-color: white;
-  border: 1px solid #000;
-  border-radius: 9px;
-  color: #000;
-  padding: 10px 30px;
-  font-size: 16px;
-  transition: background-color 90ms;
-  cursor: pointer;
 }
+
+.tutorial_btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+.footer_container {
+  width: 100%;
+  margin-top: 550px;
+  
+}
+
 .second {
   max-width: 100%;
   height: 35rem;
@@ -164,11 +170,6 @@ button:hover {
 
   gap: 2rem;
   grid-template-rows: 1fr 1fr;
-}
-
-.footer_container {
-  display: flex;
-  width: 100%;
 }
 
 .info {
@@ -184,4 +185,100 @@ button:hover {
   gap: 10px;
 }
 
+
+
 /*responsive*/
+
+@media (min-width: 568px) {
+  .first_row {
+    display: flex;
+    flex-direction: row;
+  }
+  .img_1 {
+    width: 50%;
+  }
+  .para {
+    padding: 0;
+    padding-left: 1rem;
+    width: 50%;
+  }
+  .second {
+    padding-top: 1rem;
+    grid-template-columns: 1.25fr 1.25fr;
+    width: 100%;
+  }
+  .img_ {
+    width: 100%;
+  }
+
+  .footer_container {
+    margin-top: 30px;
+    width: 100%;
+    
+  }
+  footer p {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+  button{
+    font-size: 0.9rem;
+    padding: 15px 40px;
+    
+}
+@media (min-width: 1182px) {
+  .img_container {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+  }
+
+  .img_1 {
+    width: 410.46px;
+    height: 513.08px;
+  }
+
+  .para {
+    width: 50%;
+    padding-left: 3rem;
+    font-size: 0.5rem;
+  }
+  h1 {
+    text-align: left;
+    width: 80%;
+    font-size: 3.5rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  .second {
+    width: fit-content;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img_ {
+    padding-left: 1rem;
+    width: 20rem;
+    height: 20rem;
+  }
+  .img_3 {
+    width: fit-content;
+  
+  }
+.footer_container {
+  margin-top: 2rem;
+}
+  footer p {
+    font-size: 0.9rem;
+    text-align:left;
+  }
+
+  button{
+    font-size: 0.9rem;
+    padding: 15px 40px;
+    
+  }
+}
+}
